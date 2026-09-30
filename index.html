@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resort Inter-Department Tickets</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; padding: 20px; text-align: center; }
+    .header { margin-bottom: 20px; }
+    .counter-container { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
+    .card { background: white; padding: 15px; border-radius: 8px; width: 120px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .card h2 { margin: 0; color: #007bff; }
+    .btn-new { background: #1a1a1a; color: white; border: none; padding: 12px 25px; font-size: 16px; border-radius: 6px; cursor: pointer; width: 100%; max-width: 400px; }
+    .ticket-list { margin-top: 30px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .ticket-item { background: white; padding: 15px; margin-bottom: 10px; border-radius: 6px; border-left: 5px solid #007bff; }
+  </style>
+
+  <!-- Google Firebase Libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+<body>
+
+  <div class="header">
+    <h1>THE ONE RESORT</h1>
+    <p>INTER-DEPARTMENT TICKETS — ZANZIBAR</p>
+  </div>
+
+  <div class="counter-container">
+    <div class="card"><h2 id="total-count">0</h2><p>TOTAL</p></div>
+  </div>
+
+  <button class="btn-new" onclick="createTicket()">+ New Ticket</button>
+
+  <div class="ticket-list" id="ticket-container">
+    <p>No tickets yet. Create one!</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
